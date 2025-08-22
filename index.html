@@ -1,4 +1,80 @@
-<h1>Milan Nedeljković</h1>
-<p>WordPress developer | SEO optimizer | AI-assisted web problem solver</p>
-<button onclick="switchLanguage('sr')">🇷🇸 Srpski</button>
-<button onclick="switchLanguage('en')">🇬🇧 English</button>
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milan Nedeljković | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #333; color: white; padding: 1rem; text-align: center; }
+    nav { text-align: center; margin: 1rem 0; }
+    nav button { margin: 0 0.5rem; padding: 0.5rem 1rem; cursor: pointer; }
+    section { max-width: 800px; margin: 2rem auto; padding: 1rem; background: white; border-radius: 8px; }
+    .project { margin-bottom: 1.5rem; }
+    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Milan Nedeljković</h1>
+    <p id="subtitle">WordPress developer & SEO optimizer</p>
+  </header>
+
+  <nav>
+    <button onclick="setLanguage('sr')">SR 🇷🇸</button>
+    <button onclick="setLanguage('en')">EN 🇬🇧</button>
+  </nav>
+
+  <section>
+    <h2 id="about-title">O meni</h2>
+    <p id="about-text">
+      Iskusan freelance developer sa fokusom na WordPress, WooCommerce i SEO optimizaciju. Volim da rešavam konkretne probleme i gradim sajtove koji donose rezultate.
+    </p>
+
+    <h2 id="projects-title">Projekti</h2>
+    <div class="project">
+      <h3>Portfolio sajt za fotografa</h3>
+      <p>WordPress + Elementor, SEO optimizacija, dvojezična navigacija</p>
+    </div>
+    <div class="project">
+      <h3>WooCommerce prodavnica</h3>
+      <p>Custom teme, integracija plaćanja, tehnički SEO</p>
+    </div>
+  </section>
+
+  <footer>
+    <p id="contact-text">Kontakt: milan@example.com | GitHub: @milan-dev</p>
+  </footer>
+
+  <script>
+    const content = {
+      sr: {
+        title: "Milan Nedeljković",
+        subtitle: "WordPress developer & SEO optimizer",
+        aboutTitle: "O meni",
+        aboutText: "Iskusan freelance developer sa fokusom na WordPress, WooCommerce i SEO optimizaciju. Volim da rešavam konkretne probleme i gradim sajtove koji donose rezultate.",
+        projectsTitle: "Projekti",
+        contactText: "Kontakt: milan@example.com | GitHub: @milan-dev"
+      },
+      en: {
+        title: "Milan Nedeljković",
+        subtitle: "WordPress developer & SEO optimizer",
+        aboutTitle: "About Me",
+        aboutText: "Experienced freelance developer focused on WordPress, WooCommerce, and SEO optimization. I enjoy solving practical problems and building sites that deliver results.",
+        projectsTitle: "Projects",
+        contactText: "Contact: milan@example.com | GitHub: @milan-dev"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.getElementById("title").textContent = content[lang].title;
+      document.getElementById("subtitle").textContent = content[lang].subtitle;
+      document.getElementById("about-title").textContent = content[lang].aboutTitle;
+      document.getElementById("about-text").textContent = content[lang].aboutText;
+      document.getElementById("projects-title").textContent = content[lang].projectsTitle;
+      document.getElementById("contact-text").textContent = content[lang].contactText;
+    }
+  </script>
+</body>
+</html>
