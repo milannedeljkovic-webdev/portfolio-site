@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan Nedeljkovic - WordPress Developer</title>
+    <meta name="description" content="Milan Nedeljkovic - WordPress Developer specializing in WooCommerce and SEO">
+    <meta property="og:title" content="Milan Nedeljkovic Portfolio">
+    <meta property="og:description" content="Showcasing WordPress, WooCommerce, SEO, and SQL projects">
+    <meta property="og:image" content="assets/img/profile.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hover-scale { transition: transform 0.3s; }
+        .hover-scale:hover { transform: scale(1.05); }
+        .code-block { background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; font-family: monospace; }
+        .filter-btn { transition: background-color 0.3s; }
+        .filter-btn.active { background-color: #3b82f6; color: white; }
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        [data-lang="sr"] { display: none; }
+        .lang-sr [data-lang="en"] { display: none; }
+        .lang-sr [data-lang="sr"] { display: block; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans lang-en">
+    <header class="bg-blue-600 text-white py-12 text-center fade-in">
+        <h1 class="text-5xl font-bold">Milan Nedeljkovic</h1>
+        <p class="text-xl mt-2" data-lang="en">WordPress Developer | WooCommerce | SEO</p>
+        <p class="text-xl mt-2" data-lang="sr">WordPress Programer | WooCommerce | SEO</p>
+        <div class="mt-6">
+            <a href="#contact" class="text-white mx-4 hover:underline"><i class="fas fa-envelope mr-2"></i><span data-lang="en">Contact</span><span data-lang="sr">Kontakt</span></a>
+            <a href="https://www.fiverr.com/yourprofile" target="_blank" class="text-white mx-4 hover:underline"><i class="fab fa-fiverr mr-2"></i><span data-lang="en">Hire Me on Fiverr</span><span data-lang="sr">Unajmi me na Fiverr-u</span></a>
+            <span class="cursor-pointer mx-4" onclick="document.body.classList.toggle('lang-sr');"><i class="fas fa-globe mr-2"></i><span data-lang="en">Switch to Serbian</span><span data-lang="sr">Prebaci na engleski</span></span>
+        </div>
+    </header>
+
+    <nav class="bg-gray-800 text-white py-4 text-center sticky top-0 z-10">
+        <a href="#about" class="mx-3 hover:text-blue-400"><span data-lang="en">About</span><span data-lang="sr">O meni</span></a>
+        <a href="#projects" class="mx-3 hover:text-blue-400"><span data-lang="en">Projects</span><span data-lang="sr">Projekti</span></a>
+        <a href="#skills" class="mx-3 hover:text-blue-400"><span data-lang="en">Skills</span><span data-lang="sr">Veštine</span></a>
+        <a href="#sql" class="mx-3 hover:text-blue-400"><span data-lang="en">SQL Demos</span><span data-lang="sr">SQL Demonstracije</span></a>
+        <a href="#seo-tool" class="mx-3 hover:text-blue-400"><span data-lang="en">SEO Audit Tool</span><span data-lang="sr">SEO Audit Alat</span></a>
+        <a href="#testimonials" class="mx-3 hover:text-blue-400"><span data-lang="en">Testimonials</span><span data-lang="sr">Svedočenja</span></a>
+        <a href="#blog" class="mx-3 hover:text-blue-400"><span data-lang="en">Blog</span><span data-lang="sr">Blog</span></a>
+        <a href="#contact" class="mx-3 hover:text-blue-400"><span data-lang="en">Contact</span><span data-lang="sr">Kontakt</span></a>
+    </nav>
+
+    <section id="about" class="py-12 max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">About Me</span><span data-lang="sr">O meni</span></h2>
+        <div class="p-4">
+            <p data-lang="en">I craft modern, responsive WordPress websites and WooCommerce stores, specializing in SEO, performance optimization, and custom SQL solutions. My work drives business growth through user-friendly, high-quality digital solutions.</p>
+            <p data-lang="sr">Kreiram moderne, responzivne WordPress sajtove i WooCommerce prodavnice, sa specijalizacijom u SEO, optimizaciji performansi i prilagođenim SQL rešenjima. Moj rad podstiče rast poslovanja kroz korisnički prijateljska, visokokvalitetna digitalna rešenja.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="py-12 bg-white max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">Projects</span><span data-lang="sr">Projekti</span></h2>
+        <div class="text-center mb-6">
+            <button class="filter-btn px-4 py-2 bg-gray-200 rounded-lg mx-2 active" data-filter="all"><span data-lang="en">All</span><span data-lang="sr">Svi</span></button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 rounded-lg mx-2" data-filter="wordpress"><span data-lang="en">WordPress</span><span data-lang="sr">WordPress</span></button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 rounded-lg mx-2" data-filter="woocommerce"><span data-lang="en">WooCommerce</span><span data-lang="sr">WooCommerce</span></button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 rounded-lg mx-2" data-filter="seo"><span data-lang="en">SEO</span><span data-lang="sr">SEO</span></button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 project-container">
+            <div class="p-6 bg-gray-50 rounded-lg hover-scale" data-category="wordpress woocommerce seo">
+                <img src="assets/img/lotos.jpg" alt="Arilje LOTOS" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-semibold"><i class="fas fa-shopping-cart mr-2"></i><span data-lang="en">Arilje LOTOS – Online Shop</span><span data-lang="sr">Arilje LOTOS – Webshop</span></h3>
+                <p data-lang="en">Webshop with WooCommerce, responsive design, SEO optimization, and SQL queries for inventory analytics.</p>
+                <p data-lang="sr">Webshop sa WooCommerce-om, responzivnim dizajnom, SEO optimizacijom i SQL upitima za analitiku inventara.</p>
+                <a href="https://example.com/lotos" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Live Demo</span><span data-lang="sr">Demo</span></a>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg hover-scale" data-category="wordpress">
+                <img src="assets/img/dual.jpg" alt="Dual Limovi Nova" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-semibold"><i class="fas fa-building mr-2"></i><span data-lang="en">Dual Limovi Nova – Business Site</span><span data-lang="sr">Dual Limovi Nova – Poslovni sajt</span></h3>
+                <p data-lang="en">Corporate site for roofing panels, optimized for client outreach and performance.</p>
+                <p data-lang="sr">Prezentacioni sajt za krovne panele, optimizovan za kontakt sa klijentima i performanse.</p>
+                <a href="https://example.com/dual" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Live Demo</span><span data-lang="sr">Demo</span></a>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg hover-scale" data-category="seo">
+                <img src="assets/img/seo-tool.jpg" alt="SEO Audit Tool" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-semibold"><i class="fas fa-search mr-2"></i><span data-lang="en">SEO Audit Tool</span><span data-lang="sr">SEO Alat za Audit</span></h3>
+                <p data-lang="en">Lightweight SEO scanner with SQL for data storage, checking HTTP status, titles, and more.</p>
+                <p data-lang="sr">Lagan SEO skener sa SQL-om za skladištenje podataka, proverava HTTP status, naslove i više.</p>
+                <a href="https://example.com/seo-tool" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Live Demo</span><span data-lang="sr">Demo</span></a> | 
+                <a href="https://github.com/yourrepo" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">GitHub</span><span data-lang="sr">GitHub</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-12 max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">Skills</span><span data-lang="sr">Veštine</span></h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+            <div class="p-4 bg-blue-100 rounded-lg hover-scale"><i class="fab fa-wordpress mr-2"></i>WordPress</div>
+            <div class="p-4 bg-blue-100 rounded-lg hover-scale"><i class="fas fa-shopping-bag mr-2"></i>WooCommerce</div>
+            <div class="p-4 bg-blue-100 rounded-lg hover-scale"><i class="fas fa-search mr-2"></i>SEO</div>
+            <div class="p-4 bg-blue-100 rounded-lg hover-scale"><i class="fab fa-html5 mr-2"></i>HTML & CSS</div>
+            <div class="p-4 bg-blue-100 rounded-lg hover-scale"><i class="fab fa-linux mr-2"></i>Linux & Windows</div>
+            <div class="p-4 bg-blue-100 rounded-lg hover-scale"><i class="fas fa-database mr-2"></i><span data-lang="en">SQL (MySQL, Queries, Optimization)</span><span data-lang="sr">SQL (MySQL, Upiti, Optimizacija)</span></div>
+        </div>
+    </section>
+
+    <section id="sql" class="py-12 bg-white max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">SQL Demonstrations</span><span data-lang="sr">SQL Demonstracije</span></h2>
+        <p class="text-center mb-4"><span data-lang="en">Practical SQL skills for WordPress/WooCommerce databases. Full scripts on </span><span data-lang="sr">Praktične SQL veštine za WordPress/WooCommerce baze. Pune skripte na </span><a href="https://github.com/yourrepo" target="_blank" class="text-blue-600 hover:underline">GitHub</a>.</p>
+        <div class="code-block mb-4">
+            <h3 class="text-lg font-semibold"><i class="fas fa-code mr-2"></i><span data-lang="en">Top 5 Best-Selling Products</span><span data-lang="sr">Top 5 najprodavanijih proizvoda</span></h3>
+            <pre>SELECT p.post_title AS Product_Name, SUM(oi.order_item_qty) AS Total_Sold
+FROM wp_posts p
+JOIN wp_woocommerce_order_itemmeta oim ON oi.order_item_id = oim.order_item_id
+JOIN wp_woocommerce_order_items oi ON p.ID = oi.order_item_id
+WHERE p.post_type = 'product' AND oim.meta_key = '_qty'
+GROUP BY p.ID
+ORDER BY Total_Sold DESC
+LIMIT 5;</pre>
+            <p data-lang="en">Retrieves top-selling products for analytics.</p>
+            <p data-lang="sr">Dohvata najprodavanije proizvode za analitiku.</p>
+        </div>
+        <div class="code-block mb-4">
+            <h3 class="text-lg font-semibold"><i class="fas fa-code mr-2"></i><span data-lang="en">Recent User Activity</span><span data-lang="sr">Nedavna aktivnost korisnika</span></h3>
+            <pre>SELECT u.user_login, um.meta_value AS Last_Login
+FROM wp_users u
+LEFT JOIN wp_usermeta um ON u.ID = um.user_id
+WHERE um.meta_key = 'last_login'
+AND um.meta_value > DATE_SUB(NOW(), INTERVAL 30 DAY)
+ORDER BY um.meta_value DESC;</pre>
+            <p data-lang="en">Queries recent user logins for activity reports.</p>
+            <p data-lang="sr">Upit za nedavne logine korisnika za izveštaje.</p>
+        </div>
+        <div class="code-block">
+            <h3 class="text-lg font-semibold"><i class="fas fa-code mr-2"></i><span data-lang="en">Database Optimization</span><span data-lang="sr">Optimizacija baze podataka</span></h3>
+            <pre>DELETE FROM wp_postmeta
+WHERE meta_key IN ('_edit_lock', '_edit_last')
+AND post_id NOT IN (SELECT ID FROM wp_posts);
+CREATE INDEX idx_postmeta_postid ON wp_postmeta(post_id);</pre>
+            <p data-lang="en">Cleans orphaned postmeta and adds an index for faster queries.</p>
+            <p data-lang="sr">Čisti napuštene postmeta podatke i dodaje indeks za brže upite.</p>
+        </div>
+    </section>
+
+    <section id="seo-tool" class="py-12 max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">SEO Audit Tool Demo</span><span data-lang="sr">Demo SEO Audit Alata</span></h2>
+        <p class="text-center mb-4"><span data-lang="en">Enter a URL to run a technical SEO audit. Results include HTTP status, title/meta, H1, canonical, image alts (missing listed), robots/sitemap presence, and response time. Download JSON report.</span><span data-lang="sr">Unesi URL za tehnički SEO audit. Rezultati uključuju HTTP status, title/meta, H1, canonical, alt slike (navedene nedostajuće), prisustvo robots/sitemap, i vreme odziva. Preuzmi JSON izveštaj.</span></p>
+        <div class="max-w-md mx-auto bg-gray-50 p-6 rounded-lg">
+            <input type="url" id="audit-url" placeholder="https://example.com" class="w-full p-2 mb-4 border rounded">
+            <button id="audit-btn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"><span data-lang="en">Run Audit</span><span data-lang="sr">Pokreni Audit</span></button>
+            <div id="audit-result" class="mt-4 text-sm"></div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-12 max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">Testimonials</span><span data-lang="sr">Svedočenja</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-gray-50 rounded-lg hover-scale">
+                <p data-lang="en"><i class="fas fa-quote-left mr-2"></i>Milan’s WooCommerce store increased our sales by 30% with excellent SEO and SQL analytics.</p>
+                <p data-lang="sr"><i class="fas fa-quote-left mr-2"></i>Milanov WooCommerce sajt povećao je našu prodaju za 30% uz odličnu SEO i SQL analitiku.</p>
+                <p class="font-semibold mt-2">– John Doe, Arilje LOTOS</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg hover-scale">
+                <p data-lang="en"><i class="fas fa-quote-left mr-2"></i>Milan optimized our database and site speed, reducing load times by 50%.</p>
+                <p data-lang="sr"><i class="fas fa-quote-left mr-2"></i>Milan je optimizovao našu bazu i brzinu sajta, smanjivši vreme učitavanja za 50%.</p>
+                <p class="font-semibold mt-2">– Jane Smith, Dual Limovi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-12 bg-white max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">Blog Preview</span><span data-lang="sr">Pregled Bloga</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-gray-50 rounded-lg hover-scale">
+                <h3 class="text-xl font-semibold"><i class="fas fa-pen mr-2"></i><span data-lang="en">Optimizing WordPress with SQL</span><span data-lang="sr">Optimizacija WordPress-a sa SQL-om</span></h3>
+                <p data-lang="en">Use MySQL to improve WordPress performance with custom queries.</p>
+                <p data-lang="sr">Koristi MySQL za poboljšanje performansi WordPress-a sa prilagođenim upitima.</p>
+                <a href="https://example.com/blog/sql-wordpress" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Read More</span><span data-lang="sr">Pročitaj više</span></a>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg hover-scale">
+                <h3 class="text-xl font-semibold"><i class="fas fa-pen mr-2"></i><span data-lang="en">SEO for WooCommerce</span><span data-lang="sr">SEO za WooCommerce</span></h3>
+                <p data-lang="en">Boost store rankings with practical SEO strategies.</p>
+                <p data-lang="sr">Poboljšaj rangiranje prodavnice sa SEO strategijama.</p>
+                <a href="https://example.com/blog/seo-woocommerce" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Read More</span><span data-lang="sr">Pročitaj više</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-12 max-w-6xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8"><span data-lang="en">Contact</span><span data-lang="sr">Kontakt</span></h2>
+        <div class="text-center mb-6">
+            <p><i class="fas fa-envelope mr-2"></i><span data-lang="en">Email</span><span data-lang="sr">Email</span>: <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">your.email@example.com</a></p>
+            <p><i class="fab fa-fiverr mr-2"></i>Fiverr: <a href="https://www.fiverr.com/yourprofile" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Profile</span><span data-lang="sr">Profil</span></a></p>
+            <p><i class="fab fa-linkedin mr-2"></i>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Profile</span><span data-lang="sr">Profil</span></a></p>
+            <p><i class="fab fa-github mr-2"></i>GitHub: <a href="https://github.com/yourrepo" target="_blank" class="text-blue-600 hover:underline"><span data-lang="en">Profile</span><span data-lang="sr">Profil</span></a></p>
+            <p><i class="fab fa-twitter mr-2"></i>Twitter: <a href
