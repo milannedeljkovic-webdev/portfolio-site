@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; background:#f6f8fb; color:#0f172a; }
+.hover-scale { transition: transform 0.3s; }
+.hover-scale:hover { transform: scale(1.05); }
+.code-block { background: #1a202c; color: #e2e8f0; padding: 15px; border-radius: 8px; font-family: monospace; overflow:auto; }
+.fade-in { animation: fadeIn 1s ease-in; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+[data-lang="sr"] { display:none; }
+.lang-sr [data-lang="en"] { display:none; }
+.lang-sr [data-lang="sr"] { display:block; }
+table { border-collapse: collapse; width:100%; background:white; }
+table th, table td { border:1px solid #ccc; padding:8px; text-align:left; }
+table th { background:#f1f5f9; }
